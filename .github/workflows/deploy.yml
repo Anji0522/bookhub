@@ -27,6 +27,8 @@ jobs:
           node-version: 18
           cache: npm
       - name: Install dependencies
+        env:
+          HUSKY: 0
         run: npm ci --include=dev --legacy-peer-deps
       - name: Build
         run: npm run build
